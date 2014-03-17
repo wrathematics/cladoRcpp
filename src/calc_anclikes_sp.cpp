@@ -1,4 +1,4 @@
-#include <RcppArmadillo.h>
+#include <Rcpp.h>
 
 //#include <Rcpp.h> //fixing: In file included from calc_anclikes_sp.cpp:2:
 // /Library/Frameworks/R.framework/Versions/2.15/Resources/library/RcppArmadillo/include/RcppArmadillo.h:26:6: 

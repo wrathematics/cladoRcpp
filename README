@@ -1,1 +1,13 @@
-C++ implementations of phylogenetic calculations
+This package implements in C++/Rcpp various cladogenesis-related 
+calculations that are slow in pure R.  These include the calculation of the
+probability of various scenarios for the inheritance of geographic range at
+the divergence events on a phylogenetic tree, and other calculations 
+necessary for models which are not continuous-time markov chains (CTMC), 
+but where change instead occurs instantaneously at speciation events.  
+Typically these models must assess the probability of every possible 
+combination of (ancestor state, left descendent state, right descendent 
+state).  This means that there are up to (# of states)^3 combinations to 
+investigate, and in biogeographical models, there can easily be hundreds of
+states, so calculation time becomes an issue.  C++ implementation plus 
+clever tricks (many combinations can be eliminated a priori) can greatly 
+speed the computation time over naive R implementations.
